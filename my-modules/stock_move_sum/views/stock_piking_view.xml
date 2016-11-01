@@ -8,6 +8,7 @@
 				<field name="arch" type="xml">
 					<xpath expr="//field[@name='backorder_id']" position="before">
 						<field name="contract_type" string="Tipo de Contrato"/>
+                                                <field name="tons" string="Total de toneladas"/>
 					</xpath>
 				</field>
 			</record>
