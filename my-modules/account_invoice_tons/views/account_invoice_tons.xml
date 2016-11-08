@@ -4,11 +4,15 @@
                         <record model="ir.ui.view" id="account_invoice_tons">
                                 <field name="name">account.invoice.tons</field>
                                 <field name="model">account.invoice</field>
-                                <field name="inherit_id" ref="stock.view_picking_form"/>
+                                <field name="inherit_id" ref="account.invoice_form"/>
                                 <field name="arch" type="xml">
                                         <xpath expr="//field[@name='account_id']" position="before">
                                                 <field name="tons" string="Total de toneladas"/>
+					
                                         </xpath>
+					<xpath expr="//field[@name='partner_id']" position="before">
+						<field name="contract_type" string="Tipo de Contrato"/>
+					</xpath> 
                                 </field>
                         </record>
                 </data>
