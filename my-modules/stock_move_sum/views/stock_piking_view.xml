@@ -12,5 +12,17 @@
 					</xpath>
 				</field>
 			</record>
+		
+			<record model="ir.ui.view" id="stock_picking_tree_tons">
+				<field name="name">stock.picking.tons</field>
+				<field name="model">stock.picking</field>
+				<field name="inherit_id" ref="stock.vpicktree"/>
+				<field name="arch" type="xml">
+					<xpath expr="//field[@name='state']" position="before">
+						<field name="contract_type" string="Tipo de Contrato"/>
+						<field name="tons" sum="tons" string="Toneladas"/>
+					</xpath>
+				</field>
+			</record>
 		</data>
 	</openerp>

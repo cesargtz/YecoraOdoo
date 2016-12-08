@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+        <openerp>
+                <data>
+                        <record model="ir.ui.view" id="account_invoice_purchase_tons">
+                                <field name="name">account.invoice.puchase.tons</field>
+                                <field name="model">account.invoice</field>
+                                <field name="inherit_id" ref="account.invoice_supplier_form"/>
+                                <field name="arch" type="xml">
+                                        <xpath expr="//field[@name='account_id']" position="before">
+                                                <field name="tons" string="Total de toneladas"/>
+                                        </xpath>
+                                </field>
+                        </record>
+                </data>
+        </openerp>                   

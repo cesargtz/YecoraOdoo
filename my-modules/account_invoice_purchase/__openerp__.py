@@ -1,17 +1,17 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "account_invoice_tons",
+    'name': "account_invoice_purchase",
 
     'summary': """
         Short (1 phrase/line) summary of the module's purpose, used as
         subtitle on modules listing or apps.openerp.com""",
 
     'description': """
-        Long description of module's purpose
+        This module add total tons in the purchases invoices and add of contract type
     """,
 
-    'author': "Your Company",
-    'website': "http://www.yourcompany.com",
+    'author': "Cesar Gtz",
+    'website': "http://www.yecora.mx",
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/master/openerp/addons/base/module/module_data.xml
@@ -20,17 +20,13 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': [
-		'base',
-		'account'
-		],
+    'depends': ['base'],
 
     # always loaded
     'data': [
         # 'security/ir.model.access.csv',
         'templates.xml',
-        'views/account_invoice_tons.xml',
-	'views/account_invoice_supplier_tons.xml'
+	'views/account_invoice_purchase.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

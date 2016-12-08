@@ -95,6 +95,7 @@
                                 <field name="instructor_id"/>
                             </group>
                             <group string="Schedule">
+				<separator string="Separador" colpsan="2"/>
                                 <field name="start_date"/>
                                 <field name="duration"/>
                                 <field name="seats"/>

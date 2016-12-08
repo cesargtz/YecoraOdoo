@@ -80,5 +80,5 @@ class Session(models.Model):
   @api.constrains('instructor_id', 'attendee_ids')
   def _check_instructor_not_in_attendees(self):
     for r in self:
-      if r.instructor and r.instructor in r.attendee_ids:
+      if r.instructor_id and r.instructor_id in r.attendee_ids:
         raise exception.ValidationError("A session's instructor can't be an attendee")

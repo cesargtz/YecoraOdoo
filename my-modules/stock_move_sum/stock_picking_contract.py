@@ -5,8 +5,8 @@ class StockPicking(models.Model):
     _inherit = 'stock.picking'
      
  
-    contract_type = fields.Char(compute='_contrato',  readonly=True)
-    tons = fields.Float(compute="_compute_tons")
+    contract_type = fields.Char(compute='_contrato', readonly=True)
+    tons = fields.Float(compute="_compute_tons", store=True)
     
     
     @api.one
@@ -37,5 +37,4 @@ class StockPicking(models.Model):
     def _compute_tons(self):
         self.tons = 0
         for line in self.move_lines:
-            self.tons = line.product_uom_qty
-            break
+            self.tons += line.product_uom_qty
